@@ -1,0 +1,19 @@
+# this is the top-most EditorConfig file in the current repository.
+# see http://editorconfig.org for usage details and links to plugins for your favorite editor.
+root = true
+
+# "the following options affect files of any type in the current repository:"
+# "we use the utf-8 charset in this repository."
+# "we use tabs, not spaces, in this repository."
+# "the end-of-line character should just be a line feed character."
+# "ensure a newline character when saving."
+# "we don't want whitespace at the end of our lines."
+[*]
+charset = utf-8
+indent_style = tab
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.yml]
+indent_style = space

@@ -1,0 +1,28 @@
+{
+  "name": "thum.io",
+  "version": "1.0.0",
+  "description": "Thum.io API for JS (can be used in the browser or in Node)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/golmansax/thum.io-js.git"
+  },
+  "keywords": [
+    "website",
+    "screenshots",
+    "thumbnails",
+    "api"
+  ],
+  "author": "Holman Gao <holman@golmansax.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/golmansax/thum.io-js/issues"
+  },
+  "homepage": "https://github.com/golmansax/thum.io-js#readme",
+  "dependencies": {
+    "md5": "^2.2.1"
+  }
+}
