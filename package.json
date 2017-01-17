@@ -4,6 +4,7 @@
   "description": "Thum.io API for JS (can be used in the browser or in Node)",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "mocha test/**"
   },
   "repository": {
@@ -27,6 +28,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.13.1",
+    "eslint-config-google": "^0.7.1",
     "mocha": "^3.2.0"
   }
 }
