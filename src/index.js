@@ -32,7 +32,7 @@ module.exports.getThumURL = function(options) {
 		} else {
 			switch (auth.type) {
 				case 'raw':
-					thumUrl += '/auth/' + auth.key;
+					thumUrl += '/auth/' + auth.keyId + '-' + auth.secret;
 					break;
 				case 'md5':
 					// Add 300 seconds to the current time for a 5 minute expiry
