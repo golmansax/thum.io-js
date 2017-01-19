@@ -20,6 +20,11 @@ module.exports.getThumURL = function(options) {
 		thumUrl += '/maxAge/' + maxAge;
 	}
 
+	var width = options.width;
+	if (width) {
+		thumUrl += '/width/' + width;
+	}
+
 	var auth = options.auth;
 	if (auth) {
 		if (typeof auth === 'string') {

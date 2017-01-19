@@ -25,4 +25,13 @@ describe('getThumURL', function() {
 			})).to.equal('//image.thum.io/get/maxAge/12/https://bbc.com');
 		});
 	});
+
+	describe('width:', function() {
+		it('adds to middle of url', function() {
+			expect(getThumURL({
+				url: 'https://bbc.com',
+				width: '600',
+			})).to.equal('//image.thum.io/get/width/600/https://bbc.com');
+		});
+	});
 });
