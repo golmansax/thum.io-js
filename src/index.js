@@ -42,8 +42,11 @@ module.exports.getThumURL = function(options) {
 					thumUrl += '/auth/' + auth.keyId + '-' + expires + '-' + hash;
 
 					break;
+				case 'referer':
+					// Doesn't need to add to URL
+					break;
 				default:
-					throw new Error('Auth type must be \'raw\' or \'md5\'');
+					throw new Error('Auth type must be \'raw\' or \'md5\' or \'referer\'');
 			}
 		}
 	}
