@@ -15,22 +15,26 @@ module.exports.getThumURL = function(options) {
 		thumUrl = protocol + ':' + thumUrl;
 	}
 
-	if (options.auth) {
+	var maxAge = options.maxAge;
+	if (maxAge) {
+		thumUrl += '/maxAge/' + maxAge;
+	}
+
+	var auth = options.auth;
+	if (auth) {
 		if (typeof auth === 'string') {
-			thumUrl += '/auth/' + options.auth;
+			thumUrl += '/auth/' + auth;
 		} else {
 			switch (auth.type) {
 				case 'raw':
-					thumUrl += '/auth/' + options.key;
+					thumUrl += '/auth/' + auth.key;
 					break;
 				case 'md5':
 					// Add 300 seconds to the current time for a 5 minute expiry
 					var expires = new Date().getTime() + (1000 * 300);
 
-					var hash = md5(options.key + expires + url);
-					var auth = '147-' + expires + '-' + hash;
-
-					thumUrl += '/auth/' + auth;
+					var hash = md5(auth.secret + expires + url);
+					thumUrl += '/auth/' + auth.keyId + '-' + expires + '-' + hash;
 
 					break;
 				default:
