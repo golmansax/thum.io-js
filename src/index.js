@@ -10,6 +10,11 @@ module.exports.getThumURL = function(options) {
 		throw new Error('Url must be specified');
 	}
 
+	var protocol = options.protocol;
+	if (protocol) {
+		thumUrl = protocol + ':' + thumUrl;
+	}
+
 	if (options.auth) {
 		if (typeof auth === 'string') {
 			thumUrl += '/auth/' + options.auth;
