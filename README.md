@@ -24,4 +24,5 @@ getThumURL({ url: 'https://bbc.com' }); // returns '//image.thum.io/get/https://
 |`auth`|`String | { keyId: Number, secret: String, type: 'raw' | 'md5' | 'referer'}`|
 |`maxAge`|`Number`|
 |`width`|`Number`|
+|`crop`|`Number`|
 |`protocol`|`String`|

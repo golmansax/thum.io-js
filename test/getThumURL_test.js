@@ -36,6 +36,15 @@ describe('getThumURL', function() {
 		});
 	});
 
+	describe('crop:', function() {
+		it('adds to middle of url', function() {
+			expect(getThumURL({
+				url: 'https://bbc.com',
+				crop: '300',
+			})).to.equal('//image.thum.io/get/crop/300/https://bbc.com');
+		});
+	});
+
 	describe('auth:', function() {
 		describe('when type is raw', function() {
 			it('adds to middle of url', function() {

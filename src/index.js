@@ -25,6 +25,11 @@ module.exports.getThumURL = function(options) {
 		thumUrl += '/width/' + width;
 	}
 
+	var crop = options.crop;
+	if (crop) {
+		thumUrl += '/crop/' + crop;
+	}
+
 	var auth = options.auth;
 	if (auth) {
 		if (typeof auth === 'string') {
