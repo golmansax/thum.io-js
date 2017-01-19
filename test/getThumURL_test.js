@@ -52,7 +52,7 @@ describe('getThumURL', function() {
 
 		describe('when type is md5', function() {
 			it('adds to middle of url', function() {
-				var thumUrl = getThumURL({
+				const thumUrl = getThumURL({
 					url: 'https://bbc.com',
 					auth: {
 						type: 'md5',
@@ -61,18 +61,18 @@ describe('getThumURL', function() {
 					},
 				});
 
-				var regexp = new RegExp('//image.thum.io/get/auth/(.*)/https://bbc.com');
-				var matches = thumUrl.match(regexp);
-				var auth = matches[1];
+				const regexp = new RegExp('//image.thum.io/get/auth/(.*)/https://bbc.com');
+				const matches = thumUrl.match(regexp);
+				const auth = matches[1];
 
-				var keyId = parseInt(auth.split('-')[0], 10);
+				const keyId = parseInt(auth.split('-')[0], 10);
 				expect(keyId).to.equal(5);
 
 				// Time should only be a little bit off in the past
-				var time = parseInt(auth.split('-')[1], 10);
+				const time = parseInt(auth.split('-')[1], 10);
 				expect(time - new Date()).to.be.at.most(300 * 1000);
 
-				var hash = (auth.split('-')[2]);
+				const hash = (auth.split('-')[2]);
 
 				expect(hash).to.equal(md5('lol' + time + 'https://bbc.com'));
 			});
