@@ -30,6 +30,11 @@ module.exports.getThumURL = function(options) {
 		thumUrl += '/crop/' + crop;
 	}
 
+	var png = options.png;
+	if (png) {
+		thumUrl += '/png';
+	}
+
 	var auth = options.auth;
 	if (auth) {
 		if (typeof auth === 'string') {

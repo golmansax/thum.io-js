@@ -25,4 +25,5 @@ getThumURL({ url: 'https://bbc.com' }); // returns '//image.thum.io/get/https://
 |`maxAge`|`Number`|
 |`width`|`Number`|
 |`crop`|`Number`|
+|`png`|`Boolean`|
 |`protocol`|`String`|
