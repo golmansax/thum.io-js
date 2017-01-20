@@ -45,6 +45,15 @@ describe('getThumURL', function() {
 		});
 	});
 
+	describe('refresh:', function() {
+		it('adds to middle of url', function() {
+			expect(getThumURL({
+				url: 'https://bbc.com',
+				refresh: true,
+			})).to.equal('//image.thum.io/get/refresh/https://bbc.com');
+		});
+	});
+
 	describe('png:', function() {
 		it('adds to middle of url', function() {
 			expect(getThumURL({

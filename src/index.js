@@ -35,6 +35,11 @@ module.exports.getThumURL = function(options) {
 		thumUrl += '/png';
 	}
 
+	var refresh = options.refresh;
+	if (refresh) {
+		thumUrl += '/refresh';
+	}
+
 	var auth = options.auth;
 	if (auth) {
 		if (typeof auth === 'string') {
