@@ -40,6 +40,20 @@ module.exports.getThumURL = function(options) {
 		thumUrl += '/refresh';
 	}
 
+	var device = options.device;
+	if (device) {
+		switch (device) {
+			case 'iphone5':
+			case 'iphone6':
+			case 'iphone6plus':
+			case 'galaxys5':
+				thumUrl += '/' + device;
+				break;
+
+			default: throw new Error('Device is not valid');
+		}
+	}
+
 	var auth = options.auth;
 	if (auth) {
 		if (typeof auth === 'string') {

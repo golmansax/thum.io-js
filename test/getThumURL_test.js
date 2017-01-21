@@ -63,6 +63,24 @@ describe('getThumURL', function() {
 		});
 	});
 
+	describe('device:', function() {
+		it('adds to middle of url', function() {
+			expect(getThumURL({
+				url: 'https://bbc.com',
+				device: 'iphone5',
+			})).to.equal('//image.thum.io/get/iphone5/https://bbc.com');
+		});
+
+		it('throws an error if invalid', function() {
+			expect(function() {
+				getThumURL({
+					url: 'https://bbc.com',
+					device: 'windowsPhone',
+				});
+			}).to.throw('Device is not valid');
+		});
+	});
+
 	describe('auth:', function() {
 		describe('when type is raw', function() {
 			it('adds to middle of url', function() {
