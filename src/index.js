@@ -43,6 +43,7 @@ module.exports.getThumURL = function(options) {
 	var device = options.device;
 	if (device) {
 		switch (device) {
+			case 'ipad':
 			case 'iphone5':
 			case 'iphone6':
 			case 'iphone6plus':
