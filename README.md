@@ -13,7 +13,8 @@ npm install --save thum.io
 ```js
 import { getThumURL } from 'thum.io'
 
-getThumURL({ url: 'https://bbc.com' }); // returns '//image.thum.io/get/https://bbc.com'
+console.log(getThumURL({ url: 'https://bbc.com' }));
+// '//image.thum.io/get/https://bbc.com'
 ```
 
 ### Full list of options
