@@ -27,4 +27,5 @@ console.log(getThumURL({ url: 'https://bbc.com' }));
 |`width`|`Number`|
 |`crop`|`Number`|
 |`png`|`Boolean`|
+|`ogImage`|`Boolean`|
 |`protocol`|`String`|
