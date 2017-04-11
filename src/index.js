@@ -40,6 +40,11 @@ module.exports.getThumURL = function(options) {
 		thumUrl += '/refresh';
 	}
 
+	var ogImage = options.ogImage;
+	if (ogImage) {
+		thumUrl += '/ogImage';
+	}
+
 	var device = options.device;
 	if (device) {
 		switch (device) {

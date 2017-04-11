@@ -1,6 +1,6 @@
 {
   "name": "thum.io",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Thum.io API for JS (can be used in the browser or in Node)",
   "main": "index.js",
   "scripts": {
