@@ -15,6 +15,11 @@ module.exports.getThumURL = function(options) {
 		thumUrl = protocol + ':' + thumUrl;
 	}
 
+	var useImageAPI = options.useImageAPI;
+	if (useImageAPI) {
+		thumUrl += '/image';
+	}
+
 	var maxAge = options.maxAge;
 	if (maxAge) {
 		thumUrl += '/maxAge/' + maxAge;
