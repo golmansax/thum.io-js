@@ -22,7 +22,7 @@ console.log(getThumURL({ url: 'https://bbc.com' }));
 |Option|Type|
 |------|----|
 |`url`|`String`|
-|`auth`|`String | { keyId: Number, secret: String, type: 'raw' | 'md5' | 'referer'}`|
+|`auth`|`String \| { keyId: Number, secret: String, type: 'raw' \| 'md5' \| 'referer'}`|
 |`maxAge`|`Number`|
 |`width`|`Number`|
 |`crop`|`Number`|
