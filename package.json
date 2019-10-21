@@ -2,9 +2,11 @@
   "name": "thum.io",
   "version": "1.0.8",
   "description": "Thum.io API for JS (can be used in the browser or in Node)",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "tslint -p .",
+    "prepublish": "tsc",
     "test": "mocha test/**"
   },
   "repository": {
@@ -27,9 +29,11 @@
     "md5": "^2.2.1"
   },
   "devDependencies": {
+    "@types/md5": "^2.1.33",
+    "@types/node": "^12.11.1",
     "chai": "^3.5.0",
-    "eslint": "^3.13.1",
-    "eslint-config-google": "^0.7.1",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
   }
 }
